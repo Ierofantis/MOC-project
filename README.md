@@ -1,4 +1,4 @@
-/-------------------------------------------------------------------------
+
 / Starter Code and GUI Application for Course 2 in the
 / Java Programming: Object Oriented Design of 
 / Data Structures Specialization:
@@ -11,4 +11,4 @@
 / and Adam Setters
 /
 / Date: 10/29/2015
-/-------------------------------------------------------------------------
+

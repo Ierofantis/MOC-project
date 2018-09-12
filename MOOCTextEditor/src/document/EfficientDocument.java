@@ -52,7 +52,7 @@ public class EfficientDocument extends Document {
 		// OF THIS METHOD.
 		List<String> tokens = getTokens("[!?.]+|[a-zA-Z]+");
 		for (String token : tokens) {
-					if (isWord(tok)) {
+					if (isWord(token)) {
 						numWords++;
 						numSyllables += countSyllables(token);
 					} else {

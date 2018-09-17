@@ -16,8 +16,8 @@ public class MyLinkedList<E> extends AbstractList<E> {
 
 	/** Create a new empty LinkedList */
 	public MyLinkedList() {
-		// TODO: Implement this method
-		 size=0;
+	    // TODO: Implement this method
+             size=0;
 	     head = new LLNode<E>(null);
 	     tail = new LLNode<E>(null);
 	     head.next = tail;
@@ -47,12 +47,13 @@ public class MyLinkedList<E> extends AbstractList<E> {
 		// TODO: Implement this method.
 		if( index < 0 || index >= size ){
 			throw new IndexOutOfBoundsException("Invalid index");
-		}
+		}	
 		
 		LLNode<E> temp=head;
+		
 		for(int i=0; i<index; i++)
 		{
-			temp = temp.next;
+		   temp = temp.next;
 		}
 		return temp.next.data;	
 	}
@@ -72,6 +73,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 		if (element == null) {
 			throw new NullPointerException("Cannot be null");
 		}
+		
 		LLNode<E> temp = head;
 		//LLNode<E> holder;
 		for(int i=0; i < index-1 && temp.next != null; i++)

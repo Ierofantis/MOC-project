@@ -2,9 +2,11 @@ package spelling;
 
 import java.util.List;
 import java.util.Set;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /** 
  * An trie data structure that implements the Dictionary and the AutoComplete ADT
@@ -39,7 +41,20 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	 */
 	public boolean addWord(String word)
 	{
+		word = word.toLowerCase();	
 	    //TODO: Implement this method.
+		  TrieNode current = root;
+		  if( word != null ) {
+			  if( !isWord(word) ){
+		    for (int i = 0; i < word.length(); i++) {
+		    	char w = word.charAt(i);
+		    	if(current.getChild(w)!= null){
+		    	   current = current.getChild(w);		    		
+		    	}
+		    	   current.insert(w);	       
+		    }		 
+		  }
+		 }
 	    return false;
 	}
 	
@@ -50,7 +65,7 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	public int size()
 	{
 	    //TODO: Implement this method
-	    return 0;
+	    return this.size;
 	}
 	
 	
@@ -58,9 +73,19 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	 * described in the videos for this week. */
 	@Override
 	public boolean isWord(String s) 
-	{
-	    // TODO: Implement this method
-		return false;
+	{ 
+		
+	    //TODO: Implement this method.
+		  TrieNode current = root;
+		  if( s != null ) {
+		    for (int i = 0; i < s.length(); i++) {
+		    	char w = s.charAt(i);
+		    	if(current.getChild(w)!= null){
+		    	   current = current.getChild(w);		    		
+		    	}	  
+		    } 
+		  }
+	    return false;		
 	}
 
 	/** 
@@ -100,8 +125,8 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
     	 //       If it is a word, add it to the completions list
     	 //       Add all of its child nodes to the back of the queue
     	 // Return the list of completions
-    	 
-         return null;
+  return prefix;	
+	  
      }
 
  	// For debugging

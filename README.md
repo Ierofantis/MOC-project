@@ -7,7 +7,7 @@ My Code and GUI Application for Course 2 in the
 / https://www.coursera.org/learn/data-structures-optimizing-performance
 /
 
-/Boilerplate code is authored by UCSD MOOC Team:
+/ Boilerplate code is authored by UCSD MOOC Team:
 / Mia Minnes, Christine Alvarado, Leo Porter, Alec Brickman
 / and Adam Setters
 /
